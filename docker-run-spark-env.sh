@@ -18,4 +18,5 @@ cat /usr/local/spark/conf/template-core-site.xml | m4 -DAWS_ACCESS_KEY_ID=$AWS_A
 cat /usr/local/spark/conf/template-hive-site.xml | m4 -DDB_CONNECTION_URL=$DB_CONNECTION_URL -DDB_PASS=$DB_PASS > /usr/local/spark/conf/hive-site.xml
 env | grep SPARK | awk '{print "export \"" $0 "\""}' > /usr/local/spark/conf/spark-env.sh
 export CLASSPATH="/usr/local/spark/lib/mysql-connector-java-5.1.30-bin.jar"
+export PATH="$PATH:/usr/local/spark/bin"
 exec $@
