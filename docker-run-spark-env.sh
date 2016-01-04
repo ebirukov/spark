@@ -1,5 +1,6 @@
 #!/bin/bash
-DOCKER_HOSTNAME=`curl -s http://169.254.169.254/latest/meta-data/public-hostname`
+DOCKER_HOSTNAME=127.0.0.1
+#`curl -s http://169.254.169.254/latest/meta-data/public-hostname`
 export SPARK_MASTER_PORT=7077
 export  SPARK_MASTER_WEBUI_PORT=8080
 export SPARK_WORKER_PORT=8888
