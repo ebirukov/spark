@@ -9,4 +9,5 @@ RUN apt-get update \
         && chmod +x /etc/profile.d/configure.sh
 
 ADD docker-run-spark-env.sh /usr/local/bin/docker-run-spark-env.sh
+ADD script-runner.sh /usr/local/bin/script-runner.sh
 ADD mysql-connector-java-5.1.30-bin.jar usr/local/spark/lib/
