@@ -1,4 +1,4 @@
-FROM epahomov/docker-spark
+FROM ebirukov/docker-spark
 MAINTAINER e.birukov
 COPY configure.sh /etc/profile.d/
 RUN apt-get update \
