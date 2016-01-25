@@ -2,7 +2,7 @@ FROM ebirukov/docker-spark
 MAINTAINER e.birukov
 COPY configure.sh /etc/profile.d/
 RUN apt-get update \
-        && apt-get install -y python-pip unzip curl jq nano m4 \
+        && apt-get install -y python-pip unzip curl jq nano m4 python-pandas \
         && pip install awscli \
         && rm -rf /var/lib/apt/lists/* \
         && mkdir -p /root/.aws \
